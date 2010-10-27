@@ -1,0 +1,11 @@
+<% unless flash[:avisoLogin].blank? %>
+<div id="avisoLogin"><%= flash[:avisoLogin] %></div>
+<% end %>
+
+<% form_tag :controller => :sessions, :action => :create do %>
+<p><label for="login">Login</label><br/>
+<%= text_field_tag 'login' %></p>
+<p><label for="password">Senha</label><br/>
+<%= password_field_tag 'password' %></p>
+<p><%= submit_tag 'Logar' %></p>
+<% end %>

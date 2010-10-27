@@ -1,0 +1,25 @@
+<%= form_for(@usuario) do |f| %>
+  <% unless flash[:avisoUsuario].blank? %>
+	<div id="avisoUsuario"><%= flash[:avisoUsuario] %></div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :"Nome" %><br />
+    <%= f.text_field :usu_nome %>
+  </div>
+  <div class="field">
+    <%= f.label :"E-mail" %><br />
+    <%= f.text_field :usu_email %>
+  </div>
+  <div class="field">
+    <%= f.label :"Login" %><br />
+    <%= f.text_field :usu_login %>
+  </div>
+  <div class="field">
+    <%= f.label :"Senha" %><br />
+    <%= f.password_field :usu_senha %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Enviar" %>
+  </div>
+<% end %>

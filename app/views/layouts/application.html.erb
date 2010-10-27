@@ -1,0 +1,30 @@
+
+<html>
+<head>
+	<title>Portal Educacional: <%= controller.action_name %></title>
+	<%= stylesheet_link_tag 'default.css' %>
+</head>
+<body>
+	<div id="wrapper">
+		<div id="header">
+			<div>
+					<h1>Portal Educacional</h1>
+				<ul id="nav">
+					<li><a href="/usuarios/new">Cadastre-se</a></li>
+					<% if session[:usu_id] == nil %>
+					<li><a href="/sessions/new">Login</a></li>
+					<% else %>
+					<li><a href="/sessions/destroy">Sair</a></li>
+					<%end %>
+				</ul>
+			</div>	
+		</div>
+		
+		<div id="content">
+			<%= yield %>
+		</div>
+		<div id="clearfooter"></div>
+	</div>
+	<div id="footer"></div>	
+</body>
+</html>

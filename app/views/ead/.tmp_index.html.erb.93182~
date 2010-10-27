@@ -1,0 +1,7 @@
+
+<% unless flash[:avisoSair].blank? %>
+<div id="avisoSair"><%= flash[:avisoSair] %></div>
+<% end %>
+Olá mundo
+
+
